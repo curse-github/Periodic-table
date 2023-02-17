@@ -1,0 +1,82 @@
+body {
+	width:calc(100vw - 1px);
+	height:calc(100vh - 1em);
+	margin: 0;
+
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+		sans-serif;
+	-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+	background-color: var(--bs-body-bg) !important;
+	color:white;
+}
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+* {
+	--bs-body-bg: #222528 !important;
+	--bs-dark-border-subtle:#131618 !important;
+}
+#root {
+	display: flex;
+	flex-flow:row wrap;
+	
+	width:max(min(99vw,calc(calc(100vh - 1em) * 2)),1000px);
+	aspect-ratio:2;
+	--marginthing:3px;
+}
+#root > div {
+	display: inline-block;
+	width: calc(5.55% - 6px);
+	height: calc(11.1% - 6px);
+	margin:var(--marginthing);
+}
+.border {
+	width:100%; height:100%;
+	background-color:var(--bs-dark-border-subtle);
+	border-radius: 0.5em;
+}
+.inner {
+	width:calc(100% - 6px); height:calc(100% - 0.75em);
+	margin-right:6px; margin-left:6px; margin-top:0.25em; margin-bottom:0.5em;
+}
+.inner > div {
+	height:7%; width:100%;
+	font-size:small;
+	margin-bottom:24%;
+}
+.inner > .large {
+	font-size:large;
+	height:14%; width:100%;
+	margin-bottom:26%;
+}
+.inner > .small {
+	font-size:0px; width:0px;height:0px;
+	margin-bottom:0px;
+}
+.border:hover {
+	border-style: solid;
+	border-color: blue;
+	border-width:2px;
+	--expand:40%;
+	width: calc(100% + var(--expand));
+	height: calc(100% + var(--expand));
+	transform: translate(calc(var(--expand) / -2.5),calc(var(--expand) / -3.25));
+}
+.border:hover > .inner > div { margin-bottom:14%; }
+.border:hover > .inner > .large { margin-bottom:20%; }
+.border:hover > .inner > .small {
+	margin-bottom:8%;
+	font-size:small;
+	height:14%; width:100%;
+}
+
+.Tm  { background-color:maroon        }
+.Am  { background-color:sienna        }
+.Aem { background-color:darkgoldenrod }
+.Rnm { background-color:green         }
+.Ml  { background-color:teal          }
+.Ptm { background-color:darkblue      }
+.Ng  { background-color:purple        }
+.An  { background-color:palevioletred }
+.Ln  { background-color:saddlebrown   }
